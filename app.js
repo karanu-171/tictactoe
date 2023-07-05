@@ -12,7 +12,7 @@ const winConditions = [
     [2, 4, 6],
 ];
 
-let options = ["", "", "", "", "", "", "","", ""];
+let options = Array(9).fill("");
 let currentPlayer = "X";
 let running = false;
 
@@ -77,7 +77,7 @@ function checkWinner(){
 
 function restartGame(){
     currentPlayer = "X";
-    options = ["", "", "", "", "", "", "", "", ""];
+    options.fill("");
     statusText.textContent = `${currentPlayer}'s turn`;
     cells.forEach(cell => cell.textContent = "");
     running = true;
